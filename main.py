@@ -3,7 +3,7 @@ import numpy as np
 import sys
 
 pygame.init()
-screen = pygame.display.set_mode((1280, 720))
+screen = pygame.display.set_mode((1280, 720), flags=pygame.RESIZABLE)
 pygame.display.set_caption('Math Contest')
 
 f = pygame.freetype.Font("consola.ttf", 36)
@@ -68,5 +68,5 @@ while True:
         p1 = 200
         p2 = 470 + i * 30
 
-        f.render_to(screen, (p1, p2), "Circle %d X: %6.3f Y: %.3f R: %.3f" % (i + 1, circle_data[i][0], circle_data[i][1], circle_data[i][2]))
+        f.render_to(screen, (p1, p2), "Circle %d X: %10.7f Y: %.7f R: %.7f" % (i + 1, circle_data[i][0], circle_data[i][1], circle_data[i][2]))
     pygame.display.update()
